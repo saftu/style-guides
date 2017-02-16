@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="dist/jquery.toc.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="./dist/jsStyle.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">-->
+    <link rel="stylesheet" title="Androidstudio" href="dist/androidstudio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Blooders Coding Standard</title>
+  </head>
+  <body class="container">
+
+    <h1 class='text-center'>Blooders Coding Standard</h1><br>
+    <h4 class ='text-left'>Table of Contents</h4><br>
+    <div class="content">
+      <ul data-toc=".content" data-toc-headings="h4,h5"></ul>
+      <br>  
+      
+      <h4><a name="introduction">Introduction</a></h4>
+        <p class='text-justify'>This style guide is meant to be used as the defacto coding standard for all future software development at Blooders. As of right now (2017) we are migrating
+        our complete codebase to React and React Native. This mainly means our codebase will now purely be in Javascript(and of course HTML + CSS but let's not
+        go into the HTML as a programming language dilemma).</p>
+      <br>  
+      <h4><a name="sourcefile">Source File</a></h4>
+        <h5>File name</h5>
+        <p class='text-justify'>File names must all be lowercase. Naming should always be descriptive and words must be separated using underscores (_).</p>
+      <br>  
+      <h4><a name="formatting">Formatting</a></h4>
+        <h5>Indentation</h5>
+        <p class='text-justify'>Use soft tabs (space character) set to 2 spaces</p>
+        <pre><code class="js">
+// Good
+function azul () {
+  return true;
+}
+
+// Bad
+function azul () {
+    return true;
+}
+        </code></pre>
+      <br>  
+      <h5>Braces</h5>
+        <p class='text-justify'>Braces are used for all control structures. Braces are required for all control structures (i.e. if, else, for, do, while, as well as any others), 
+          even if the body contains only a single statement. The first statement of a non-empty block must begin on its own line.</p>
+        <pre><code class="js">
+// Bad
+if (someVeryLongCondition())
+  doSomething();
+
+for (let i = 0; i < length; i++) bar(foo[i]);
+
+
+// Good
+if (someVeryLongCondition()) {
+  doSomething();
+}
+
+for (let i = 0; i < length; i++) {
+  bar(foo[i]);
+}
+        </code></pre>
+
+      <h4><a name="naming">Naming</a></h4>
+      <h5>Function naming</h5>
+        <p class='text-justify'>Avoid single letter names and be descriptive with your naming. Use <code>PascalCase</code> when naming functions</p>
+      <br>
+      <pre><code class="js">
+// bad
+function q() {
+  // ...
+}
+
+function c() {}
+
+// good
+function Query() {
+  // ...
+}
+
+function ThisIsMyFunction() {}
+      </code></pre>
+      <h5>Variable and Object naming</h5>
+      <p class='text-justify'>Use <code>camelCase</code> when naming objects and instances.</p>
+      <pre><code class="js">
+// bad
+var OBJEcttsssss = {};
+
+// good
+var thisIsMyObject = {};
+      </code></pre>
+
+      <h5>Constant naming</h5>
+      <p class='text-justify'>Constant names use <code>CONSTANT_CASE</code> all uppercase letters, with words separated by underscores.</p>
+      <pre><code class="js">
+// Constants
+const NUMBER = 5;
+/** @const */ exports.NAMES = ImmutableList.of('Ed', 'Ann');
+/** @enum */ exports.SomeEnum = { ENUM_CONSTANT: 'value' };
+
+// Not constants
+let letVariable = 'non-const';
+class MyClass { constructor() { /** @const */ this.nonStatic = 'non-static'; } };
+/** @type {string} */ MyClass.staticButMutable = 'not @const, can be reassigned';
+const /** Set<String> */ mutableCollection = new Set();
+const /** ImmutableSet<SomeMutableType> */ mutableElements = ImmutableSet.of(mutable);
+const Foo = goog.require('my.Foo');  // mirrors imported name
+const logger = log.getLogger('loggers.are.not.immutable');
+      </code></pre>
+      <h4><a name="naming">Objects</a></h4>
+      <p class="text-justify">Use the literal syntax for object creation</p>
+      <pre><code class="js">
+// bad
+const item = new Object();
+
+// good
+const item = {};
+        </code></pre>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
