@@ -31,30 +31,61 @@
       <h2><a name="sourcefile">Source File</a></h2>
         <h4>File Name</h4>
         <p class='text-justify'>File names must all be lowercase. Naming should always be descriptive and words must be separated using underscores (_).</p>
-        <h4>Use strict mode</h4>
+        <h4>Strict Mode</h4>
         <p class='text-justify'>Always use the <code>"use strict";</code> directive. The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
         Strict mode changes previously accepted "bad syntax" into real errors. A comprehensive explanation of the <code>'use strict';</code> directive can be found here:
         <a href="https://www.w3schools.com/js/js_strict.asp">https://www.w3schools.com/js/js_strict.asp</a> </p>
-        
-        <h4>Variable Declaration</h4>
+        <h4>Declarations</h4>
+        <h5>Variable Declaration</h5>
         <p class='text-justify'>
           <ul>
-            <li><h6>Avoid global variables</h6></li>
-            <li><h6>Always declare local variables (Enforced by the use strict directive).</h6></li>
-            <li><h6>Initialize variables</h6></li>
-            <li><h6>Never declare <code>Number</code>, <code>String</code>, or <code>Boolean</code> Objects. Treat them as primitives.</h6></li>
-            <li><h6>Use <code>const</code> and <code>let</code>. Use <code>const</code> for all of your references, if you must reassign references, 
-            use <code>let</code> instead of <code>var</code>.</h6></li>
+            <li>Avoid global variables</li>
+            <li>Always declare local variables (Enforced by the use strict directive).</li>
+            <li>Initialize variables</li>
+            <li>Never declare <code>Number</code>, <code>String</code>, or <code>Boolean</code> Objects. Treat them as primitives.</li>
+            <li>Use <code>const</code> and <code>let</code>. Use <code>const</code> for all of your references, if you must reassign references, 
+            use <code>let</code> instead of <code>var</code>.</li>
           </ul>
         </p>
-        <h4>Function Declaration</h4>
+        <h5>Function Declaration</h5>
         <p class='text-justify'>
           <ul>
-            <li><h6>Functions should be arranged in alphabetical order</h6></li>
-            <li><h6>Every function should follow .</h6></li>
+            <li>Functions should be arranged in alphabetical order</li>
+            <li>Every function must contain header comments following the specified standard.</li>
           </ul>
         </p>
-      <br>  
+      <br> 
+      <h4>Comments</h4> 
+        <ul>
+          <li><p class='text-justify'>Use <code>/** ... */</code> for multi-line comments.</p></li>
+           <li><p class='text-justify'>Use <code>//</code> for single line comments. Place single line comments on a newline above the subject of the comment. 
+           Put an empty line before the comment unless it's on the first line of a block. Start all comments with a blank space.</p></li>
+           <li>Use <code>// FIXME:</code> and <code>// TODO:</code> to annotate source files.</li>
+        </ul>
+      <h5>Function Comments</h5>
+      <p class='text-justify'>Special "documentation tags" should be used to give more information. For example, 
+        if the function is a constructor, you can indicate this by adding a tag. Parameters and </p>
+      <pre><code class="js">
+/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function Book(title, author) {
+}
+
+/**
+ * Returns the sum of a and b
+ * @param {Number} a
+ * @param {Number} b
+ * @returns {Number}
+ */
+function Sum(a, b) {
+    return a + b;
+}
+</pre></code>
+<br>
       <h2><a name="formatting">Formatting</a></h2>
         <h4>Indentation</h4>
         <p class='text-justify'>Use soft tabs (space character) set to 2 spaces</p>
@@ -98,7 +129,7 @@ var x = y + z;
 var values = ["Volvo", "Saab", "Fiat"];
         </code></pre><br>
 
-      <h4>Line Length < 80</h4>
+      <h4>Line Length</h4>
         <p class='text-justify'>For readability, avoid lines longer than 80 characters.
         If a JavaScript statement does not fit on one line, the best place to break it, is after a comma.</p>
         <pre><code class="js">
