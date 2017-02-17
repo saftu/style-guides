@@ -18,50 +18,59 @@
   <body class="container">
 
     <h1 class='text-center'>Blooders Style Guide</h1><br>
-    <h3 class ='text-left'>Table of Contents</h3><br>
+    <h2 class ='text-left'>Table of Contents</h2><br>
     <div class="content">
-      <ul data-toc=".content" data-toc-headings="h3,h5"></ul>
+      <ul data-toc=".content" data-toc-headings="h2,h4,h6"></ul>
       <br>  
       
-      <h3><a name="introduction">Introduction</a></h3>
+      <h2><a name="introduction">Introduction</a></h2>
         <p class='text-justify'>This style guide is meant to be used as the defacto coding standard for all future software development at Blooders. As of right now (2017) we are migrating
         our complete codebase to React and React Native. This mainly means our codebase will now purely be in Javascript(and of course HTML + CSS but let's not
         go into the HTML as a programming language dilemma).</p>
       <br>  
-      <h3><a name="sourcefile">Source File</a></h3>
-        <h5>File name</h5>
+      <h2><a name="sourcefile">Source File</a></h2>
+        <h4>File Name</h4>
         <p class='text-justify'>File names must all be lowercase. Naming should always be descriptive and words must be separated using underscores (_).</p>
-        <h5>Use strict mode</h5>
+        <h4>Use strict mode</h4>
         <p class='text-justify'>Always use the <code>"use strict";</code> directive. The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
-        Strict mode changes previously accepted "bad syntax" into real errors.</p>
-        <h5>Variable declaration</h5>
+        Strict mode changes previously accepted "bad syntax" into real errors. A comprehensive explanation of the <code>'use strict';</code> directive can be found here:
+        <a href="https://www.w3schools.com/js/js_strict.asp">https://www.w3schools.com/js/js_strict.asp</a> </p>
+        
+        <h4>Variable Declaration</h4>
         <p class='text-justify'>
           <ul>
-            <li>Avoid global variables</li>
-            <li>Always declare local variables (Enforced by the use strict directive).</li>
-            <li>Initialize variables</li>
-            <li>Never declare <code>Number</code>, <code>String</code>, or <code>Boolean</code> Objects. Treat them as primitives.</li>
-            <li>Use <code>const</code> and <code>let</code>. Use <code>const</code> for all of your references, if you must reassign references, 
-            use <code>let</code> instead of <code>var</code>.</li>
+            <li><h6>Avoid global variables</h6></li>
+            <li><h6>Always declare local variables (Enforced by the use strict directive).</h6></li>
+            <li><h6>Initialize variables</h6></li>
+            <li><h6>Never declare <code>Number</code>, <code>String</code>, or <code>Boolean</code> Objects. Treat them as primitives.</h6></li>
+            <li><h6>Use <code>const</code> and <code>let</code>. Use <code>const</code> for all of your references, if you must reassign references, 
+            use <code>let</code> instead of <code>var</code>.</h6></li>
+          </ul>
+        </p>
+        <h4>Function Declaration</h4>
+        <p class='text-justify'>
+          <ul>
+            <li><h6>Functions should be arranged in alphabetical order</h6></li>
+            <li><h6>Every function should follow .</h6></li>
           </ul>
         </p>
       <br>  
-      <h3><a name="formatting">Formatting</a></h3>
-        <h5>Indentation</h5>
+      <h2><a name="formatting">Formatting</a></h2>
+        <h4>Indentation</h4>
         <p class='text-justify'>Use soft tabs (space character) set to 2 spaces</p>
         <pre><code class="js">
 // Good
-function azul () {
+function blue () {
   return true;
 }
 
 // Bad
-function azul () {
+function blue () {
     return true;
 }
         </code></pre><br>
 
-      <h5>Braces</h5>
+      <h4>Braces</h4>
         <p class='text-justify'>Braces are used for all control structures. Braces are required for all control structures (i.e. if, else, for, do, while, as well as any others), 
           even if the body contains only a single statement. The first statement of a non-empty block must begin on its own line.</p>
         <pre><code class="js">
@@ -82,14 +91,14 @@ for (let i = 0; i < length; i++) {
 }
         </code></pre><br>
 
-      <h5>Spaces Around Operators</h5>
+      <h4>Spaces Around Operators</h4>
         <p class='text-justify'>Always put spaces around operators ( = + - * / ), and after commas:</p>
         <pre><code class="js">
 var x = y + z;
 var values = ["Volvo", "Saab", "Fiat"];
         </code></pre><br>
 
-      <h5>Line Length < 80</h5>
+      <h4>Line Length < 80</h4>
         <p class='text-justify'>For readability, avoid lines longer than 80 characters.
         If a JavaScript statement does not fit on one line, the best place to break it, is after a comma.</p>
         <pre><code class="js">
@@ -107,8 +116,8 @@ this.foo = foo(firstArg, 1 +
 
 <!---->
 
-      <h3><a name="naming">Naming</a></h3>
-      <h5>Function naming</h5>
+      <h2><a name="naming">Naming</a></h2>
+      <h4>Function naming</h4>
         <p class='text-justify'>Avoid single letter names and be descriptive with your naming. Use <code>PascalCase</code> when naming functions</p>
       <br>
       <pre><code class="js">
@@ -126,7 +135,7 @@ function Query() {
 
 function ThisIsMyFunction() {}
       </code></pre><br>
-      <h5>Variable and Object naming</h5>
+      <h4>Variable and Object naming</h4>
       <p class='text-justify'>Avoid single letter names and be descriptive with your naming. Use <code>camelCase</code> when naming objects, instances and parameters.</p>
       <pre><code class="js">
 // Bad
@@ -136,7 +145,7 @@ var OBJEcttsssss = {};
 var thisIsMyObject = {};
       </code></pre><br>
 
-      <h5>Constant naming</h5>
+      <h4>Constant naming</h4>
       <p class='text-justify'>Constant names use <code>CONSTANT_CASE</code> all uppercase letters, with words separated by underscores.</p>
       <pre><code class="js">
 // Constants
@@ -153,7 +162,7 @@ const /** ImmutableSet<SomeMutableType> */ mutableElements = ImmutableSet.of(mut
 const Foo = goog.require('my.Foo');  // mirrors imported name
 const logger = log.getLogger('loggers.are.not.immutable');
       </code></pre><br>
-      <h3><a name="naming">Objects</a></h3>
+      <h2><a name="naming">Objects</a></h2>
       <p class="text-justify">Use the literal syntax for object creation</p>
       <pre><code class="js">
 // Bad
@@ -163,6 +172,27 @@ const item = new Object();
 const item = {};
         </code></pre><br>
     </div>
+
+    <h2><a name="naming">ESLint</a></h2>
+
+    <p class="text-justify">All of the rules in this document follow standard ESLint style rules. 
+      If you're using Visual Studio Code you can install the plugin here(It basically tells you when you mess up):</p>
+    <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">Visual Studio Code ESLint</a>
+    <p class="text-justify">In order for the plug in to work with our exact ruleset(Extending Airbnb's) your <code>.eslintrc.json</code> must look like this:</p>
+    <code><pre><br>
+module.exports = {
+  "extends": "airbnb",
+  "rules": {
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "strict": 0
+  },
+  "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
+  ]
+};
+    </code></pre><br>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
