@@ -1,0 +1,133 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #303030;
+}
+h1{
+  font-size: 42px;
+}
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 30px;
+}
+h4{
+  font-size: 24px;
+}
+h5{
+  font-size: 18px;
+}
+.btn{
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.btn-shadow{
+  box-shadow: 0 2px 3px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+.btn-success{
+  background: #63E57B;
+  border-color: #63E57B;
+}
+.btn-success:hover{
+  background: #4fb762!important;
+  border-color: #4fb762!important;
+}
+.btn-success-outline{
+  color: #63E57B;
+  background: transparent;
+  border-color: #63E57B;
+  border-width: 2px;
+}
+.btn-success-outline:hover{
+  color: white;
+  background: #63E57B;
+  border-color: #63E57B;
+  border-width: 2px;
+}
+.btn-primary{
+  background: #5AE5E1;
+  border-color: #5AE5E1;
+}
+.btn-primary:hover{
+  background: #48b7b4!important;
+  border-color: #48b7b4!important;
+}
+.btn-primary-outline{
+  color: #5AE5E1;
+  background: transparent;
+  border-color: #5AE5E1;
+  border-width: 2px;
+}
+.btn-primary-outline:hover{
+  color: white;
+  background: #5AE5E1;
+  border-color: #5AE5E1;
+  border-width: 2px;
+}
+.btn-danger{
+  background: #E74C3C;
+  border-color: #E74C3C;
+}
+.btn-danger:hover{
+  background: #b83c30!important;
+  border-color: #b83c30!important;
+}
+.btn-danger-outline{
+  color: #E74C3C;
+  background: transparent;
+  border-color: #E74C3C;
+  border-width: 2px;
+}
+.btn-danger-outline:hover{
+  color: white;
+  background: #E74C3C;
+  border-color: #E74C3C;
+  border-width: 2px;
+}
+.btn-default{
+  background: white;
+  border-color: white;
+}
+.btn-default:hover{
+  background: #f0f0f0!important;
+  border-color: #f0f0f0!important;
+}
+.subheader{
+  color: #565656;
+  font-size: 22px;
+}
+p{
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+.card{
+  background: white;
+  padding: 8px 12px;
+  box-shadow: 0 2px 3px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+}
+.square{
+  width: 100px;
+  height: 100px;
+}
+.green {
+  background: #63E57B;
+}
+.red {
+  background: #E74C3C;
+}
+.blue {
+  background: #5AE5E1;
+}
+.dark {
+  background: #303030;
+}
+.dark-gray{
+  background: #D5D5D5;
+}
+.gray {
+  background: #ECECEC;
+}
+.no-padding {
+  padding: 0px;
+}
