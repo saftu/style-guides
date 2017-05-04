@@ -29,7 +29,7 @@ h5{
   background: #63E57B;
   border-color: #63E57B;
 }
-.btn-success:hover{
+.btn-success:hover, .btn-success:active, .btn-success:focus{
   background: #4fb762!important;
   border-color: #4fb762!important;
 }
@@ -49,7 +49,7 @@ h5{
   background: #5AE5E1;
   border-color: #5AE5E1;
 }
-.btn-primary:hover{
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{
   background: #48b7b4!important;
   border-color: #48b7b4!important;
 }
@@ -69,7 +69,7 @@ h5{
   background: #E74C3C;
   border-color: #E74C3C;
 }
-.btn-danger:hover{
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus{
   background: #b83c30!important;
   border-color: #b83c30!important;
 }
@@ -89,9 +89,19 @@ h5{
   background: white;
   border-color: white;
 }
-.btn-default:hover{
+.btn-default:hover, .btn-default:focus, .btn-default:active{
   background: #f0f0f0!important;
   border-color: #f0f0f0!important;
+}
+.btn-facebook {
+  color: white;
+  background: #3b5998;
+  border-color: #3b5998;
+}
+.btn-facebook:hover, .btn-facebook:active, .btn-facebook:focus {
+  color: white;
+  background: #2f4779!important;
+  border-color: #2f4779!important;
 }
 .subheader{
   color: #565656;
