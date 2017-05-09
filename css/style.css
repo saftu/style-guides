@@ -103,6 +103,15 @@ h5{
   background: #2f4779!important;
   border-color: #2f4779!important;
 }
+.btn-twitter {
+  color: white;
+	background: #66ADFF;
+  border-color: #66ADFF;
+}
+.btn-twitter:hover, .btn-twitter:active, .btn-twitter:focus {
+	background: #84bdff!important;
+  border-color: #84bdff!important;
+}
 .subheader{
   color: #565656;
   font-size: 22px;
@@ -123,11 +132,20 @@ p{
 .green {
   background: #63E57B;
 }
+.green2 {
+  background: #4fb762;
+}
 .red {
   background: #E74C3C;
 }
+.red2 {
+  background: #b83c30;
+}
 .blue {
   background: #5AE5E1;
+}
+.blue2 {
+  background: #48b7b4;
 }
 .dark {
   background: #303030;
