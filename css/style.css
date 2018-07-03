@@ -1,26 +1,53 @@
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../fonts/Gotham-Book.woff') format('woff'),
+	url('../fonts/Gotham-Book.ttf')  format('truetype')
+}
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url('../fonts/Gotham-Bold.woff') format('woff'),
+	url('../fonts/Gotham-Bold.ttf')  format('truetype')
+}
+@font-face {
+	font-family: 'Gotham-Medium';
+	src: url('../fonts/Gotham-Medium.woff') format('woff'),
+	url('../fonts/Gotham-Medium.ttf')  format('truetype')
+}
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gotham-Medium', sans-serif;
   color: #303030;
 }
 h1{
+  font-family: 'Gotham-Bold', sans-serif!important;;
   font-size: 42px;
 }
 h2{
+  font-family: 'Gotham-Bold', sans-serif!important;;
   font-size: 36px;
 }
 h3{
+  font-family: 'Gotham-Bold', sans-serif!important;;
   font-size: 30px;
 }
 h4{
+  font-family: 'Gotham-Bold', sans-serif!important;;
   font-size: 24px;
 }
 h5{
+  font-family: 'Gotham-Bold', sans-serif!important;;
   font-size: 18px;
 }
-.btn{
-  font-family: 'Open Sans', sans-serif;
+p {
+  font-size: 16px;
+  font-family: 'Gotham-Medium', sans-serif!important;
+}
+.btn {
+  font-family: 'Gotham-Medium', sans-serif!important;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+.btn-round{
+  border-radius: 20px;
 }
 .btn-shadow{
   box-shadow: 0 2px 3px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
@@ -112,6 +139,9 @@ h5{
 	background: #84bdff!important;
   border-color: #84bdff!important;
 }
+.btn-full{
+  width: 100%;
+}
 .subheader{
   color: #565656;
   font-size: 22px;
@@ -129,33 +159,106 @@ p{
   width: 100px;
   height: 100px;
 }
+.mini-square{
+  width: 20px;
+  height: 20px;
+  border: 3px;
+}
 .green {
   background: #63E57B;
 }
-.green2 {
+.green-shade1 {
+  background: #59ce6e;
+}
+.green-shade2 {
   background: #4fb762;
 }
 .red {
   background: #E74C3C;
 }
-.red2 {
+.red-shade1 {
+  background: #cf4436;
+}
+.red-shade2 {
   background: #b83c30;
 }
 .blue {
   background: #5AE5E1;
 }
-.blue2 {
+.blue-shade1 {
+  background: #51ceca;
+}
+.blue-shade2 {
   background: #48b7b4;
 }
 .dark {
   background: #303030;
 }
-.dark-gray{
+.dark-gray {
   background: #D5D5D5;
 }
 .gray {
-  background: #ECECEC;
+  background: #F9F9F9;
 }
 .no-padding {
   padding: 0px;
+}
+.card{
+  margin: 0px;
+  padding: 0px;
+  border-radius: 25px;
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  height: 495px;
+  color: #707070;
+}
+.card-header{
+  height: 250px;
+  position: relative;
+}
+.card-overlay {
+  border-radius: 25px 25px 0px 0px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.26);
+}
+.card-header-desc {
+  color: white;
+  padding: 14px;
+  position: relative;
+  top: 165px;
+}
+.book{
+  font-family: 'Gotham-Book', sans-serif!important;
+}
+.font-14{
+  font-size: 14px;
+}
+.card-body{
+  padding: 14px;
+}
+.card-progress {
+  width: 225px;
+  margin: 20px auto 10px auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-progress .mini-square{
+  margin-left: 4px;
+  margin-right: 5px;
+  flex: 1;
+  text-align: center;
+}
+.card:hover{
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
 }
